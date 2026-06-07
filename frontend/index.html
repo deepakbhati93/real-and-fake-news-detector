@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthLens - Real vs Fake News Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+       <!-- script.js should be included with a <script> tag, not <link>. It is moved to the end of the body below -->
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">TruthLens</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#detector">Detector</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Unveil the Truth</h1>
+                <p>Powered by advanced AI, TruthLens helps you distinguish between real and fake news in seconds. Stay informed, stay protected.</p>
+            </div>
+        </section>
+
+        <section class="news-detector" id="detector">
+            <h2 class="detector-title">🎯 News Truth Detector</h2>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('text')">📝 Text Analysis</button>
+                
+            </div>
+
+            <div id="text-tab" class="tab-content active">
+                <div class="input-group">
+                    <label class="input-label">📰 Paste your news article or headline:</label>
+                    <textarea class="news-input" id="newsText" placeholder="Enter the news content you want to verify... Our AI will analyze the credibility, sources, and factual accuracy."></textarea>
+                </div>
+            </div>
+
+            <div id="url-tab" class="tab-content">
+                <div class="input-group">
+                    <label class="input-label">🌐 Enter news article URL:</label>
+                    <input type="url" class="url-input" id="newsUrl" placeholder="https://example.com/news-article">
+                </div>
+            </div>
+
+            <button class="analyze-btn" onclick="analyzeNews()">
+                <span>🔍 Analyze Truth Score</span>
+            </button>
+
+            <div class="loading">
+                <div class="spinner"></div>
+                <span style="margin-left: 15px; color: #667eea; font-weight: 600;">Analyzing content...</span>
+            </div>
+
+            <div id="result" class="result-section">
+                <div class="result-icon"></div>
+                <div class="result-text"></div>
+                <div class="confidence-score"></div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose TruthLens?</h2>
+                <p class="section-subtitle">Our cutting-edge technology provides comprehensive fact-checking with unparalleled accuracy</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Advanced machine learning algorithms analyze content patterns, source credibility, and linguistic markers to detect misinformation.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Results</h3>
+                        <p>Get comprehensive fact-checking results in seconds, not hours. Perfect for breaking news and time-sensitive information.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>High Accuracy</h3>
+                        <p>Our system achieves 95%+ accuracy through continuous learning and training on millions of verified news articles.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Source Verification</h3>
+                        <p>Cross-references multiple trusted sources and databases to verify facts and detect inconsistencies.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Detailed Reports</h3>
+                        <p>Receive comprehensive analysis including credibility scores, source reliability, and potential bias indicators.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Privacy First</h3>
+                        <p>Your data is processed securely and never stored. We prioritize your privacy while delivering accurate results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- load frontend logic -->
+    <script src="/static/script.js" defer></script>
+</body>
+</html>

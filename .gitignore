@@ -1,0 +1,7 @@
+.env
+*.joblib
+model/
+__pycache__/
+*.pyc
+.DS_Store
+news_from_api.csv
